@@ -37,14 +37,15 @@ getComponent('navbar.html').then(component => {
     const navLinks = document.querySelectorAll('.sk-nav-link');
     const path = window.location.pathname.toLowerCase();
 
-    // pesky edge case (default route)
+    // Pesky edge case (default route)
     if (path === '/') {
         navLinks[0].classList.add('sk-nav-active');
         return;
     }
 
     for (let i = 0; i <= navLinks.length; i++) {
-        if (path === '/' + navLinks[i].innerHTML.toLowerCase()) {
+        console.log(navLinks[i].getAttribute('href').toLowerCase());
+        if (path === navLinks[i].getAttribute('href').toLowerCase()) {
             navLinks[i].classList.add('sk-nav-active');
         }
     }

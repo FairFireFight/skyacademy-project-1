@@ -37,7 +37,20 @@ Contents:
     background-color: #f6f6f6;
 }
 
-/* 4. Navbar styling ============================================*/
+/* 3.2. Text Colors */
+.sk-text-primary {
+    color: #247f3e;
+}
+
+.sk-text-gray {
+    color: #444343;
+}
+
+.sk-text-light-gray {
+    color: #a09f9f;
+}
+
+/* 4. Navbar styling ====================================*/
 .sk-nav-link {
     font-weight: lighter !important;
 }
@@ -49,3 +62,4 @@ Contents:
 .sk-nav-active {
     font-weight: 400 !important;
 }
+
