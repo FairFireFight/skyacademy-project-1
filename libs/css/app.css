@@ -1,0 +1,27 @@
+/*
+app.css
+
+Sulaiman Jamal Al-Asad
+September 1st 2024
+-------------------------------------------
+This CSS file contains all custom non-Bootstrap
+classes used in this project, and is to be loaded
+in every page.
+
+All classes begin with sk-* to avoid collisions
+with Bootstrap classes.
+
+Contents:
+    1. Colors
+*/
+
+/* 1. Colors ============================================*/
+
+/* 1.1. Background Colors*/
+.sk-bg-primary {
+    background-color: #247f3e;
+}
+
+.sk-bg-secondary {
+    background-color: #f6f6f6;
+}
