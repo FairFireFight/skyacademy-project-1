@@ -16,6 +16,7 @@ Contents:
     2. Font setter
     3. Colors
     4. Navbar styling
+    5. Image styling
 */
 
 /* 1. Imports ===========================================*/
@@ -63,3 +64,11 @@ Contents:
     font-weight: 400 !important;
 }
 
+/* 4. Image styling =====================================*/
+.sk-profile-image {
+    width: 64px;
+    height: 64px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
