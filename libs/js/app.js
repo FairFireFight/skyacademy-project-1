@@ -20,7 +20,7 @@ Contents:
 **/
 async function getComponent(path) {
     path = 'components/' + path;
-    
+
     const response = await fetch(path);
     const data = await response.text();
     return data;
@@ -32,7 +32,22 @@ const navbar = document.getElementById('navbar');
 
 getComponent('navbar.html').then(component => {
     navbar.innerHTML = component;
+}).then(() => {
+    // Set current page's nav link font to bold
+    const navLinks = document.querySelectorAll('.sk-nav-link');
+    const path = window.location.pathname.toLowerCase();
+
+    // pesky edge case (default route)
+    if (path === '/') {
+        navLinks[0].classList.add('sk-nav-active');
+        return;
+    }
+
+    for (let i = 0; i <= navLinks.length; i++) {
+        if (path === '/' + navLinks[i].innerHTML.toLowerCase()) {
+            navLinks[i].classList.add('sk-nav-active');
+        }
+    }
 });
 
-// Set current page's nav link font to bold
-// TODO
+
