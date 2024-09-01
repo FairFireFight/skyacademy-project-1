@@ -8,20 +8,44 @@ This CSS file contains all custom non-Bootstrap
 classes used in this project, and is to be loaded
 in every page.
 
-All classes begin with sk-* to avoid collisions
-with Bootstrap classes.
+All proprietary classes begin with sk-* to avoid collisions
+with Bootstrap classes. sk- is shorthand for "Sky"
 
 Contents:
-    1. Colors
+    1. Imports
+    2. Font setter
+    3. Colors
+    4. Navbar styling
 */
 
-/* 1. Colors ============================================*/
+/* 1. Imports ===========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* 1.1. Background Colors*/
+/* 2. Font Setter =======================================*/
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* 3. Colors ============================================*/
+
+/* 3.1. Background Colors*/
 .sk-bg-primary {
     background-color: #247f3e;
 }
 
 .sk-bg-secondary {
     background-color: #f6f6f6;
+}
+
+/* 4. Navbar styling ============================================*/
+.sk-nav-link {
+    font-weight: lighter !important;
+}
+
+.sk-nav-link:hover {
+    text-decoration: underline;
+}
+
+.sk-nav-active {
+    font-weight: 400 !important;
 }
