@@ -123,7 +123,7 @@
 
         <!-- 2.2. News section -->
         <section class="mb-5">
-            <h4 class="sk-text-gray mb-3">Latest News:</h4>
+            <h4 class="sk-text-gray mb-3">Latest News</h4>
 
             <!-- Carousel -->
             <div id="newsCarousel" class="carousel slide carousel-fade shadow-sm" data-bs-ride="carousel">
@@ -169,9 +169,9 @@
 
         <!-- 2.3. Vacation requests section -->
         <section class="mb-5">
-            <div class="sk-card px-5 sk-bg-secondary" style="height: auto">
+            <div class="sk-card px-4 sk-bg-secondary" style="height: auto">
                 <!-- Header -->
-                <div class="row align-items-center pb-3 mb-3 border-2 border-bottom">
+                <div class="row align-items-center mx-1 mt-1 pb-3 mb-3 border-2 border-bottom">
                     <div class="col-md p-0">
                         <div class="d-flex align-items-center">
                             <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary me-3"></i>
@@ -188,13 +188,13 @@
                 </div>
                 
                 <!-- requests container -->
-                <div>
-                
+                <div class="container-fluid">
+                    <div id="requestsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"></div>
                 </div>
 
                 <!-- view more link -->
                 <div class="d-flex justify-content-end">
-                    <a class="sk-text-primary fs-5" href="/requests.html">View More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="sk-text-primary fs-5 fw-bold" href="/requests.html">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -202,6 +202,7 @@
 
     <!-- ============ Scripts ============ -->
     <!-- shared app JS link -->
+    <script src="libs/js/service_provider.js"></script>
     <script src="libs/js/app.js"></script>
     <!-- bootstrap JS link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

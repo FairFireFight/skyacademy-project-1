@@ -18,6 +18,7 @@ Contents:
     4. Navbar styling
     5. Image styling
     6. Forms styles
+    7. Cards stying
 */
 
 /* 1. Imports ===========================================*/
@@ -58,7 +59,7 @@ a.sk-text-primary {
 }
 
 a.sk-text-primary:hover {
-    text-decoration: underline;
+    text-decoration: 2px solid underline;
 }
 
 /* 4. Navbar styling ====================================*/
@@ -78,6 +79,22 @@ a.sk-text-primary:hover {
 .sk-profile-image {
     width: 64px;
     height: 64px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.sk-profile-image-md {
+    width: 80px;
+    height: 80;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.sk-profile-image-lg {
+    width: 96px;
+    height: 96px;
 
     object-fit: cover;
     border-radius: 50%;
@@ -109,4 +126,19 @@ a.sk-text-primary:hover {
     .sk-search-box {
         width: 100%;
     }
+}
+
+/* 7. Cards styles ======================================*/
+.sk-card {
+    height: 180px;
+    padding: 15px;
+
+    border-radius: 25px;
+    box-shadow: 0px 4px 3px #aaaaaa66;
+}
+
+.sk-request-card-slim {
+    background-color: white;
+
+    box-shadow: 0px 4px 3px #aaaaaa66;
 }

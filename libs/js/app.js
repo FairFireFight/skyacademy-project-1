@@ -11,32 +11,33 @@ Contents:
     1. Global function declarations
     2. Preload checks
     3. Navbar loader 
+    4. Vacation requests loader
 */
 
 
 // 1. Global function declarations ========================
 
 /*
-*   
+*   Gets the contents of a file in the components directory
 **/
-async function getComponent(path) {
-    path = 'components/' + path;
+async function getComponent(component) {
+    component = 'components/' + component;
 
-    const response = await fetch(path);
+    const response = await fetch(component);
     const data = await response.text();
     return data;
 }
 
 // 2. Preload checks ======================================
 if (!window.location.host) {
-    alert('ERROR:\nYou are currently viewing this page through the file:/// scheme\nIn order for the page to function correctly, you must open it through a localhost.\nThis is because the JS "fetch()" function only works with http:// scheme.')
+    alert('ERROR:\nYou are currently viewing this page through the file:/// scheme\nIn order for the page to function correctly, you must open it through a localhost.\nThis is because the JS "fetch()" function only works with the http:// scheme.')
 }
-
 
 // 3. Navbar Loader =======================================
 // Load navbar into element with id #navbar 
 const navbar = document.getElementById('navbar');
 
+// verify that the navbar loaded first
 if (navbar) {
     getComponent('navbar.html').then(component => {
         navbar.innerHTML = component;
@@ -45,8 +46,8 @@ if (navbar) {
         const navLinks = document.querySelectorAll('.sk-nav-link');
         const path = window.location.pathname.toLowerCase();
     
-        // Pesky edge case (default route)
-        if (path === '/') {
+        // edge cases
+        if (path === '/' || path === '/requests.html') {
             navLinks[0].classList.add('sk-nav-active');
             return;
         }
@@ -59,4 +60,17 @@ if (navbar) {
     });
 }
 
+// 3. Vacation requests Loader ============================
+const requestsContainer = document.getElementById('requestsContainer');
 
+// generate 4 cards
+
+getComponent('request-card-slim.html').then(component => {
+    for (let i = 0; i < 4; i++) {
+        // replace all wildcards with the name fetched from service provider
+        card = component.replace(/\[name\]/g, names[i]);
+    
+        // add it to the container
+        requestsContainer.innerHTML += card;
+    }
+});

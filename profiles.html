@@ -8,7 +8,9 @@
     Contents:
         1. Navbar loader
         2. Main Content
-            2.1. Updates cards
+            2.1. Main Card
+            2.2. Leave history
+            2.3. Pending Requests
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Home | Sky Academy Project 1</title>
+    <title>Profiles | Sky Academy Project 1</title>
 
     <!-- shared app CSS link-->
     <link rel="stylesheet" href="libs/css/app.css">
@@ -32,8 +34,75 @@
 
     <!-- 2. Main content -->
     <main class="container-lg pt-5">
-        
+        <!-- 2.1. Main card -->
+        <section class="my-2">
+            <div class="sk-card sk-bg-secondary d-flex flex-column justify-content-between" style="min-height: 180px; height: auto;">
+                <!-- Image, name, create requst button -->
+                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <!-- Picture, name, occupation, & department -->
+                    <div class="d-flex align-items-center">
+                        <img src="libs/images/employee_1.jpg" alt="Profile Picture" class="sk-profile-image-md shadow-sm me-3">
+                        <div>
+                            <h5 class="sk-text-gray m-0">Mike Doe</h5>
+                            <h6 class="text-secondary m-0">Public Relations Officer</h6>
+                            <h6 class="sk-text-light-gray m-0">Marketing</h6>
+                        </div>
+                    </div>
+
+                    <!-- new request button -->
+                    <div>
+                        <a class="btn btn-outline-success my-2 py-1 px-2 px-md-5" href="#">New Request</a>
+                    </div>
+                </div>
+
+                <!-- User information -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 mx-0">
+                    <div class="col px-1 my-1 d-flex justify-content-start">
+                        <i class="fa-solid fa-user fa-3x me-3 sk-text-light-gray"></i>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <h6 class="sk-text-gray m-0">Reporting To</h6>
+                            <p class="sk-text-light-gray m-0">Zoe Strela</p>
+                        </div>
+                    </div>
+
+                    <div class="col px-1 my-1 d-flex justify-content-start">
+                        <i class="fa-solid fa-arrow-trend-up fa-3x me-3 sk-text-light-gray"></i>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <h6 class="sk-text-gray m-0">Corporate Level</h6>
+                            <p class="sk-text-light-gray m-0">Level 12</p>
+                        </div>
+                    </div>
+
+                    <div class="col px-1 my-1 d-flex justify-content-start">
+                        <i class="fa-solid fa-hourglass fa-3x me-3 sk-text-light-gray"></i>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <h6 class="sk-text-gray m-0">Lifetime</h6>
+                            <p class="sk-text-light-gray m-0">2 Years</p>
+                        </div>
+                    </div>
+
+                    <div class="col px-1 my-1 d-flex justify-content-start">
+                        <i class="fa-solid fa-location-arrow fa-3x me-3 sk-text-light-gray"></i>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <h6 class="sk-text-gray m-0">Vacation Days Left</h6>
+                            <p class="sk-text-light-gray m-0">28 Days</p>
+                        </div>
+                    </div>
+
+                    <div class="col px-1 my-1 d-flex justify-content-start">
+                        <i class="fa-solid fa-prescription-bottle-medical fa-3x me-3 sk-text-light-gray"></i>
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <h6 class="sk-text-gray m-0">Sick Days Left</h6>
+                            <p class="sk-text-light-gray m-0">12 Days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
+
     <!-- ============ Scripts ============ -->
     <!-- shared app JS link -->
     <script src="libs/js/app.js"></script>
