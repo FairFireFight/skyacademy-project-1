@@ -17,6 +17,7 @@ Contents:
     3. Colors
     4. Navbar styling
     5. Image styling
+    6. Forms styles
 */
 
 /* 1. Imports ===========================================*/
@@ -64,11 +65,39 @@ Contents:
     font-weight: bold !important;
 }
 
-/* 4. Image styling =====================================*/
+/* 5. Image styling =====================================*/
 .sk-profile-image {
     width: 64px;
     height: 64px;
 
     object-fit: cover;
     border-radius: 50%;
+}
+
+/* 6. Forms styles ======================================*/
+
+.sk-search-box {
+    width: 400px;
+
+    border-radius: 50px;
+    border: 1px solid #444343;
+    font-size: 1.25rem;
+    padding: 6px 20px 6px 50px;
+
+    background-image: url('/libs/images/sprites/magnifying_glass.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 10px;
+}
+
+.sk-search-box:focus {
+    border: 1px solid #247f3e;
+    outline: 1px solid #247f3e;
+}
+
+/* stretch to fill below md breakpoint */
+@media (max-width: 767px) {
+    .sk-search-box {
+        width: 100%;
+    }
 }

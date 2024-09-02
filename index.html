@@ -10,6 +10,7 @@
         2. Main Content
             2.1. Updates section
             2.2. News section
+            2.3. Vacation requests section
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -121,7 +122,7 @@
         </section>
 
         <!-- 2.2. News section -->
-        <section>
+        <section class="mb-5">
             <h4 class="sk-text-gray mb-3">Latest News:</h4>
 
             <!-- Carousel -->
@@ -131,21 +132,29 @@
                         <img src="libs/images/news/news_coffee.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h4 class="m-0">Best Types of Coffee for Productivity</h4>
-                            <p class="m-0 fs-5">We believe that different coffee types can give differing amounts of energy and brainpower, find out which suits you best!</p>
+                            <p class="m-0 fs-5">
+                                We believe that different coffee types can give differing amounts of energy and brainpower, find out which suits you best!
+                            </p>
                         </div>
                     </div>
+
                     <div class="carousel-item" data-bs-interval="10000">
                         <img src="libs/images/news/news_vacation.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h4 class="m-0">Best Spots for a Summer Vacation</h4>
-                            <p class="m-0 fs-5">Here are our top picks of locations for you lay back, relax, and enjoy your time off.</p>
+                            <p class="m-0 fs-5">
+                                Here are our top picks of locations for you lay back, relax, and enjoy your time off.
+                            </p>
                         </div>
                     </div>
+
                     <div class="carousel-item" data-bs-interval="10000">
                         <img src="libs/images/news/news_team.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption">
                             <h4 class="m-0">Common Work Misconceptions</h4>
-                            <p class="m-0 fs-5">Understanding the enviroment as either the employer or employee is vital for long-term company or career success.</p>
+                            <p class="m-0 fs-5">
+                                Understanding the enviroment as either the employer or employee is vital for long-term company or career success.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -155,6 +164,29 @@
                 <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" aria-label="News 1"></button>
                 <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="News 2"></button>
                 <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="News 3"></button>
+            </div>
+        </section>
+
+        <!-- 2.3. Vacation requets section -->
+        <section class="mb-5">
+            <div class="sk-card sk-bg-secondary">
+                <div class="row align-items-center pb-3 border-2 border-bottom">
+                    <!-- Header -->
+                    <div class="col-md">
+                        <div class="d-flex align-items-center">
+                            <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary mx-3"></i>
+                            <h4 class="m-0 sk-text-gray">Vacation Requests</h4>
+                        </div>
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="col-md">
+                        <div class="d-flex justify-content-end">
+                            <input type="text" class="sk-search-box mt-3 mt-md-0" placeholder="Search..."/>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </main>
