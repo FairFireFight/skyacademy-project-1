@@ -52,6 +52,15 @@ Contents:
     color: #a09f9f;
 }
 
+/* link styling */
+a.sk-text-primary {
+    text-decoration: none;
+}
+
+a.sk-text-primary:hover {
+    text-decoration: underline;
+}
+
 /* 4. Navbar styling ====================================*/
 .sk-nav-link {
     font-weight: lighter !important;

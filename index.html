@@ -96,7 +96,7 @@
             <!-- 2.1.2. Requests cards -->
             <div class="col-xl-5">
                 <div class="d-flex">
-                    <a href="#" class="sk-card sk-card-link flex-grow-1 me-3">
+                    <a href="/requests.html" class="sk-card sk-card-link flex-grow-1 me-3">
                         <div class="d-flex align-items-center justify-content-center px-sm-3 px-1 h-100">
                             <div class="text-center my-3">
                                 <i class="d-none d-sm-inline sk-card-icon fa-regular fa-address-book fa-flip-horizontal"></i>
@@ -126,7 +126,7 @@
             <h4 class="sk-text-gray mb-3">Latest News:</h4>
 
             <!-- Carousel -->
-            <div id="newsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div id="newsCarousel" class="carousel slide carousel-fade shadow-sm" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src="libs/images/news/news_coffee.jpg" class="d-block w-100" alt="...">
@@ -167,26 +167,35 @@
             </div>
         </section>
 
-        <!-- 2.3. Vacation requets section -->
+        <!-- 2.3. Vacation requests section -->
         <section class="mb-5">
-            <div class="sk-card sk-bg-secondary">
-                <div class="row align-items-center pb-3 border-2 border-bottom">
-                    <!-- Header -->
-                    <div class="col-md">
+            <div class="sk-card px-5 sk-bg-secondary" style="height: auto">
+                <!-- Header -->
+                <div class="row align-items-center pb-3 mb-3 border-2 border-bottom">
+                    <div class="col-md p-0">
                         <div class="d-flex align-items-center">
-                            <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary mx-3"></i>
+                            <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary me-3"></i>
                             <h4 class="m-0 sk-text-gray">Vacation Requests</h4>
                         </div>
                     </div>
 
                     <!-- Search Box -->
-                    <div class="col-md">
+                    <div class="col-md p-0">
                         <div class="d-flex justify-content-end">
                             <input type="text" class="sk-search-box mt-3 mt-md-0" placeholder="Search..."/>
                         </div>
                     </div>
                 </div>
                 
+                <!-- requests container -->
+                <div>
+                
+                </div>
+
+                <!-- view more link -->
+                <div class="d-flex justify-content-end">
+                    <a class="sk-text-primary fs-5" href="/requests.html">View More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </section>
     </main>
