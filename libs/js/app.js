@@ -11,7 +11,6 @@ Contents:
     1. Global function declarations
     2. Preload checks
     3. Navbar loader 
-    4. Vacation requests loader
 */
 
 
@@ -60,17 +59,4 @@ if (navbar) {
     });
 }
 
-// 3. Vacation requests Loader ============================
-const requestsContainer = document.getElementById('requestsContainer');
 
-// generate 4 cards
-
-getComponent('request-card-slim.html').then(component => {
-    for (let i = 0; i < 4; i++) {
-        // replace all wildcards with the name fetched from service provider
-        card = component.replace(/\[name\]/g, names[i]);
-    
-        // add it to the container
-        requestsContainer.innerHTML += card;
-    }
-});

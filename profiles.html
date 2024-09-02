@@ -35,8 +35,8 @@
     <!-- 2. Main content -->
     <main class="container-lg pt-5">
         <!-- 2.1. Main card -->
-        <section class="my-2">
-            <div class="sk-card sk-bg-secondary d-flex flex-column justify-content-between" style="min-height: 180px; height: auto;">
+        <section class="mt-2 mb-5">
+            <div class="sk-card sk-bg-secondary d-flex flex-column justify-content-between h-auto" style="min-height: 180px;">
                 <!-- Image, name, create requst button -->
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
                     <!-- Picture, name, occupation, & department -->
@@ -100,12 +100,53 @@
             </div>
         </section>
 
+        <!-- 2.2. Leave history -->
+        <section class="sk-card sk-bg-secondary h-auto mb-5" style="min-height: 100px;">
+            <!-- Header -->
+            <div class="d-flex align-items-center pb-3 mb-3 border-2 border-bottom mx-3">
+                <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary me-3"></i>
+                <h4 class="m-0 sk-text-gray">Leave History</h4>
+            </div>
 
+            <div class="container-fluid mb-2 mx-0">
+                <div id="leaveHistoryContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                </div>
+            </div>
+
+            <!-- view more link -->
+            <div class="d-flex justify-content-end mx-3">
+                <a class="sk-text-primary fs-5 fw-bold" href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="sk-card px-4 sk-bg-secondary h-auto">
+                <!-- Header -->
+                <div class="d-flex align-items-center mx-1 mt-1 pb-3 mb-3 border-2 border-bottom">
+                    <i class="fa-regular fa-address-book fa-flip-horizontal fa-3x sk-text-primary me-3"></i>
+                    <h4 class="m-0 sk-text-gray">Pending Requests</h4>
+                </div>
+                
+                <!-- requests container -->
+                <div class="container-fluid">
+                    <div id="requestsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"></div>
+                </div>
+
+                <!-- view more link -->
+                <div class="d-flex justify-content-end">
+                    <a class="sk-text-primary fs-5 fw-bold" href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- ============ Scripts ============ -->
     <!-- shared app JS link -->
+    <script src="libs/js/service_provider.js"></script>
     <script src="libs/js/app.js"></script>
+
+    <!-- Unique JS files -->
+    <script src="libs/js/profiles.js"></script>
     <!-- bootstrap JS link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

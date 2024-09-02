@@ -137,6 +137,23 @@ a.sk-text-primary:hover {
     box-shadow: 0px 4px 3px #aaaaaa66;
 }
 
+.sk-card-hover {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+
+    border-radius: 20px;
+    box-shadow: 0px 4px 3px #aaaaaa66;
+    
+    background-color: white;
+
+    transition: all 0.2s;
+}
+
+.sk-card-hover:hover {
+    box-shadow: 0px 6px 8px #aaaaaa99;
+}
+
 .sk-request-card-slim {
     background-color: white;
 

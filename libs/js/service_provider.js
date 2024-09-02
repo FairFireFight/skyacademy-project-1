@@ -42,3 +42,13 @@ const names = [
     "Matthew Perry",
     "Chloe Bryant"
 ];
+
+// leave types to pick from
+const leaveTypes = [
+    'Sick Leave',
+    'Paternial Leave',
+    'Grief Leave',
+    'Annual Vacation',
+    'Unpaid Leave',
+    'Annual Vacation'
+];
