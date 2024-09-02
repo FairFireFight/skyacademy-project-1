@@ -8,6 +8,7 @@ CSS selectors unique to index.html
 
 Contents:
     1. Cards styling
+    2. Carousel styling
 */
 
 /* 1. Cards styling =====================================*/
@@ -21,12 +22,11 @@ Contents:
 }
 
 .sk-card-number {
-    font-size: 5rem;
-    font-weight: lighter;
+    font-size: 4rem;
 }
 
 .sk-card-icon {
-    font-size: 5rem;
+    font-size: 4rem;
     position: relative;
     left: 3px;
 }
@@ -40,6 +40,46 @@ Contents:
 }
 
 .sk-card-link:hover {
-    background-color: #248f3e;
+    background-color: #146f2e;
     box-shadow: 0px 4px 8px #aaaaaaaa;
+}
+
+/* 2. Carousel styling ==================================*/
+
+/* set fixed bg image size */
+.carousel-item img {
+    height: 320px;
+
+    object-fit: cover;
+}
+
+.sk-carousel-indicators button {
+    width: 13px;
+    height: 13px;
+
+    margin: 0px 4px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #d6d6d6;
+}
+
+.sk-carousel-indicators button:hover {
+    background-color: #969696;
+}
+
+/* overriding some Bootstrap styles and custom styling for caption */
+.carousel-caption {
+    width: 100%;
+
+    padding: 1rem 2rem;
+
+    left: 0;
+    bottom: 0;
+
+    text-align: start;
+
+    background-color: #ffffff83;
+    color: black;
 }
