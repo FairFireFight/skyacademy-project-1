@@ -55,19 +55,28 @@ function paginate(list, page) {
         }
     }
 
+    // no items in page, don't generate pagination.
+    if (pageNames.length == 0) {
+        return pageNames;
+    }
+
     // generate pagination ======================
     const pagination = document.getElementById('pagination');
+    const NUM_PAGES = Math.ceil(list.length / ITEMS_PER_PAGE);
 
     // create a base URL to attach to each pagination link
     const url = `/requests.html?${search ? 'q=' + search + '&' : ''}p=`
 
-    pagination.innerHTML += `<a href="${url + (page - 1)}"><i class="fa-solid fa-chevron-left fa-sm"></i></a>`;
+    // previous page
+    pagination.innerHTML += `<a href="${page != 0 ? (url + (page)) : '#'}" class="${page == 0 ? 'disabled' : ''} sk-pagination-controls"><i class="fa-solid fa-chevron-left"></i></a>`;
 
-    for (let i = 1; i <= Math.ceil(list.length / ITEMS_PER_PAGE); i++) {
-        pagination.innerHTML += `<a ${i == page ? "class='current'" : ''} href="${url + i}">${i}</a>`;
+    // page numbers
+    for (let i = 1; i <= NUM_PAGES; i++) {
+        pagination.innerHTML += `<a ${i == page + 1 ? 'class="disabled"' : ''} href="${url + i}">${i}</a>`;
     }
 
-    pagination.innerHTML += `<a href="${url + (page + 1)}"><i class="fa-solid fa-chevron-right fa-sm"></i></a>`;
+    // next page
+    pagination.innerHTML += `<a href="${page != NUM_PAGES - 1 ? (url + (page + 2)) : '#'}" class="${(NUM_PAGES - 1) == page ? 'disabled' : ''} sk-pagination-controls"}><i class="fa-solid fa-chevron-right"></i></a>`;
 
     return pageNames;
 }
@@ -76,8 +85,14 @@ function paginate(list, page) {
 function generateCards(list) {
     const requestsContainer = document.getElementById('requestsContainer');
 
+    // handle no requests case
+    if (list.length == 0) {
+        requestsContainer.innerHTML = "<h4> No results. </h4>"
+        return;
+    }
+
     getComponent('request-card-responsive.html').then((component) => {
-        let cards = ''
+        let cards = '';
 
         for (let i = 0; i < list.length; i++) {
             // replace all wildcards

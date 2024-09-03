@@ -16,7 +16,7 @@ function searchBox(e) {
     let result = searchNames(e.value);
     
     // get top 4 results
-    result.length = Math.min(result.length, 4);
+    result = result.slice(0, 4);
 
     generateCards(result);
 }
