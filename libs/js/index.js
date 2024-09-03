@@ -7,19 +7,38 @@ September 2nd 2024
 JS unique to the index.html page
 
 Contents:
-    1. Vacation requests Loader
+    1. Functions
+    2. Vacation requests Loader
 */
 
-// 1. Vacation requests Loader ============================
-const requestsContainer = document.getElementById('requestsContainer');
-
-// generate 4 cards
-getComponent('request-card-slim.html').then(component => {
-    for (let i = 0; i < 4; i++) {
-        // replace all wildcards with the name fetched from service provider
-        card = component.replace(/\[name\]/g, names[i]);
+// 1. Functions ===========================================
+function searchBox(e) {
+    let result = searchNames(e.value);
     
-        // add it to the container
-        requestsContainer.innerHTML += card;
-    }
-});
+    // get top 4 results
+    result.length = Math.min(result.length, 4);
+
+    generateCards(result);
+}
+
+function generateCards(list) {
+    const requestsContainer = document.getElementById('requestsContainer');
+
+    getComponent('request-card-slim.html').then(component => {
+        let cards = '';
+
+        for (let i = 0; i < Math.min(4, list.length); i++) {
+            // replace all wildcards with the name fetched from service provider
+            let card = component.replace(/\[name\]/g, list[i]);
+        
+            // add it to the container
+            cards += card;
+        }
+
+        requestsContainer.innerHTML = cards;
+    });
+
+}
+
+// 2. Vacation requests Loader ============================
+generateCards(names);

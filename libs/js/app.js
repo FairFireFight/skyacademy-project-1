@@ -25,8 +25,18 @@ async function getComponent(component) {
     return data;
 }
 
-function searchBox(e) {
+// search through the names array from service provider
+function searchNames(search) {
+    const lowerCaseSearchTerm = search.toLowerCase();
 
+    // no search term returns all
+    if (!search) {
+        return names;
+    }
+
+    return names.filter(name => 
+        name.toLowerCase().includes(lowerCaseSearchTerm)
+    );
 }
 
 // 2. Preload checks ======================================
