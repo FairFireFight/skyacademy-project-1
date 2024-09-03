@@ -16,9 +16,7 @@ Contents:
 
 // 1. Global function declarations ========================
 
-/*
-*   Gets the contents of a file in the components directory
-**/
+// Gets the contents of a file in the components directory
 async function getComponent(component) {
     component = 'components/' + component;
 
@@ -27,9 +25,13 @@ async function getComponent(component) {
     return data;
 }
 
+function searchBox(e) {
+
+}
+
 // 2. Preload checks ======================================
 if (!window.location.host) {
-    alert('ERROR:\nYou are currently viewing this page through the file:/// scheme\nIn order for the page to function correctly, you must open it through a localhost.\nThis is because the JS "fetch()" function only works with the http:// scheme.')
+    alert('ERROR:\nYou are currently viewing this page through the file:/// scheme\nIn order for the page to function correctly, you must open it through a localhost.\nThis is because the JS "fetch()" function only works with the http:// scheme.');
 }
 
 // 3. Navbar Loader =======================================

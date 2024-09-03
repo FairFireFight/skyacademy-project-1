@@ -1,8 +1,12 @@
-<div class="col px-0 px-sm-1 px-xl-3 mb-3" id="[name]">
+<div class="sk-request col px-0 px-sm-1 px-xl-3 mb-3" id="request-[id]">
     <div class="sk-request-card-slim p-2 p-md-3">
-        <div class="d-block d-xl-flex align-items-center text-center">
+        <div class="sk-request-card-slim-header d-block d-xl-flex align-items-center text-center">
             <img class="sk-profile-image-responsive shadow mb-2" src="libs/images/employee_1.jpg" alt="Profile Picture">
             <h4 class="sk-text-gray ms-0 ms-xl-3">[name]</h4>
+            <label class="sk-checkbox-wrapper sk-text-light-gray">
+                <input class="sk-request-checkbox" id="select-[id]" type="checkbox" onchange="selectCard(this)">
+                <span class="checkmark"></span>
+            </label>
         </div>
         <div class="row">
             <div class="col-xl-7">

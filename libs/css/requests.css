@@ -14,8 +14,19 @@ Contents:
     font-size: 0.9rem;
 }
 
+.sk-request-card-slim-header {
+    position: relative;
+}
+
+.sk-request-card-slim-header .sk-checkbox-wrapper {
+    position: absolute;
+
+    top: 0px;
+    right: 0px;
+}
+
 .col.selected .sk-request-card-slim {
-    outline: 2px solid #247f3e;
+    outline: 1px solid #247f3e;
 }
 
 .sk-profile-image-responsive {
