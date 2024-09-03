@@ -13,6 +13,7 @@ Contents:
 // 1. Leave History loader ================================
 const leaveHistoryContainer = document.getElementById('leaveHistoryContainer');
 
+// generate 6 history cards
 getComponent('leave-history-card.html').then(component => {
     for (let i = 0; i < 6; i++) {
         // replace all wildcards with the type fetched from service provider

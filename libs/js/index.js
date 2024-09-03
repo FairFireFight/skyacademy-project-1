@@ -14,7 +14,6 @@ Contents:
 const requestsContainer = document.getElementById('requestsContainer');
 
 // generate 4 cards
-
 getComponent('request-card-slim.html').then(component => {
     for (let i = 0; i < 4; i++) {
         // replace all wildcards with the name fetched from service provider

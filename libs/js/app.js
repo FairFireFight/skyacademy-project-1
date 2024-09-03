@@ -44,17 +44,19 @@ if (navbar) {
         // Set current page's nav link font to bold
         const navLinks = document.querySelectorAll('.sk-nav-link');
         const path = window.location.pathname.toLowerCase();
-    
-        // edge cases
-        if (path === '/' || path === '/requests.html') {
-            navLinks[0].classList.add('sk-nav-active');
-            return;
-        }
-    
-        for (let i = 0; i <= navLinks.length; i++) {
+
+        let found = false;
+        for (let i = 0; i < navLinks.length; i++) {
             if (path === navLinks[i].getAttribute('href').toLowerCase()) {
                 navLinks[i].classList.add('sk-nav-active');
+                found = true;
+                break;
             }
+        }
+
+        // default to home page
+        if (!found) {
+            navLinks[0].classList.add('sk-nav-active');
         }
     });
 }
