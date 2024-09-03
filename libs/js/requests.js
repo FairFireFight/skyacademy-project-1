@@ -10,8 +10,15 @@ Contents:
     1. loading requests
 */
 
+// 1. Loading requests ====================================
 const requestsContainer = document.getElementById('requestsContainer');
 
 getComponent('request-card-responsive.html').then(component => {
-    requestsContainer.innerHTML += component;
+    for (let i = 0; i < 12; i++) {
+        // replace all wildcards with the name fetched from service provider
+        card = component.replace(/\[name\]/g, names[i]);
+    
+        // add it to the container
+        requestsContainer.innerHTML += card;
+    }
 });
